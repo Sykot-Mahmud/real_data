@@ -14,24 +14,56 @@
     </style>
 </head>
 <body>
+  <h1 style="text-align: center;">Real Data Analysis</h1>
     <div class="container">
         <div class="row">
             <div class="col-6 mx-auto mt-5">
                 <table style="width:100%">
                     <tr>
-                      <th>A</th>
-                      <th>B</th>
-                      <th>C</th>
+                      <th>Name</th>
+                      <th>Open Amount</th>
+                      <th>High Amount</th>
+                      <th>Low Amount</th>
+                      <th>Close Amount</th>
                     </tr>
                     <tr>
+                      <td>Apple</td>
+                      <td id='ao'>{{text}}</td>
+                      <td id='ah'>{{text}}</td>
+                      <td id='al'>{{text}}</td>
+                      <td id='ac'>{{text}}</td>
+                      
+                      
+                      
+                      
+                    </tr>
+                    <tr>
+                      <td>Amazon</td>
                       <td id='app'>{{text}}</td>
                       <td id='apps'>{{text}}</td>
                       <td id='appss'>{{text}}</td>
+                      <td id='appsss'>{{text}}</td>
                     </tr>
                     <tr>
+                      <td>Tesla</td>
                       <td id='app-3'>{{text}}</td>
                       <td id='app-2'>{{text}}</td>
                       <td id='app-1'>{{text}}</td>
+                      <td id='app-4'>{{text}}</td>
+                    </tr>
+                    <tr>
+                      <td>Meta</td>
+                      <td id='mo'>{{text}}</td>
+                      <td id='mh'>{{text}}</td>
+                      <td id='ml'>{{text}}</td>
+                      <td id='mc'>{{text}}</td>
+                    </tr>
+                    <tr>
+                      <td>Microsoft</td>
+                      <td id='mso'>{{text}}</td>
+                      <td id='msh'>{{text}}</td>
+                      <td id='msl'>{{text}}</td>
+                      <td id='msc'>{{text}}</td>
                     </tr>
                   </table>
 
@@ -51,9 +83,23 @@
             document.querySelector('#app').innerText=data.message1;
             document.querySelector('#apps').innerText=data.message2;
             document.querySelector('#appss').innerText=data.message3;
+            document.querySelector('#appsss').innerText=data.message3;
             document.querySelector('#app-1').innerText=data.message4;
             document.querySelector('#app-3').innerText=data.message5;
             document.querySelector('#app-2').innerText=data.message6;
+            document.querySelector('#app-4').innerText=data.message1;
+            document.querySelector('#ao').innerText=data.message2;
+            document.querySelector('#ah').innerText=data.message4;
+            document.querySelector('#al').innerText=data.message5;
+            document.querySelector('#ac').innerText=data.message6;
+            document.querySelector('#mso').innerText=data.message2;
+            document.querySelector('#msh').innerText=data.message4;
+            document.querySelector('#msl').innerText=data.message5;
+            document.querySelector('#msc').innerText=data.message6;
+            document.querySelector('#mo').innerText=data.message2;
+            document.querySelector('#mh').innerText=data.message4;
+            document.querySelector('#ml').innerText=data.message5;
+            document.querySelector('#mc').innerText=data.message6;
         }
     </script>
 </body>
