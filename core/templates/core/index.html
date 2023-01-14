@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>Realtime Data</title>
+    <title>Realtime_Data</title>
     <style>
         table, th, td {
             border: 1px solid black;
@@ -14,7 +14,7 @@
     </style>
 </head>
 <body>
-  <h1 style="text-align: center;">Real Data Analysis</h1>
+  <h1 style="text-align: center;">Real-time Data Tracker App</h1>
     <div class="container">
         <div class="row">
             <div class="col-6 mx-auto mt-5">
@@ -28,10 +28,10 @@
                     </tr>
                     <tr>
                       <td>Apple</td>
-                      <td id='ao'>{{text}}</td>
-                      <td id='ah'>{{text}}</td>
-                      <td id='al'>{{text}}</td>
-                      <td id='ac'>{{text}}</td>
+                      <td id='apple_open'>{{text}}</td>
+                      <td id='apple_high'>{{text}}</td>
+                      <td id='apple_low'>{{text}}</td>
+                      <td id='apple_close'>{{text}}</td>
                       
                       
                       
@@ -39,31 +39,31 @@
                     </tr>
                     <tr>
                       <td>Amazon</td>
-                      <td id='app'>{{text}}</td>
-                      <td id='apps'>{{text}}</td>
-                      <td id='appss'>{{text}}</td>
-                      <td id='appsss'>{{text}}</td>
+                      <td id='amazon_open'>{{text}}</td>
+                      <td id='amazon_high'>{{text}}</td>
+                      <td id='amazon_low'>{{text}}</td>
+                      <td id='amazon_close'>{{text}}</td>
                     </tr>
                     <tr>
                       <td>Tesla</td>
-                      <td id='app-3'>{{text}}</td>
-                      <td id='app-2'>{{text}}</td>
-                      <td id='app-1'>{{text}}</td>
-                      <td id='app-4'>{{text}}</td>
+                      <td id='tesla_open'>{{text}}</td>
+                      <td id='tesla_high'>{{text}}</td>
+                      <td id='tesla_low'>{{text}}</td>
+                      <td id='tesla_close'>{{text}}</td>
                     </tr>
                     <tr>
                       <td>Meta</td>
-                      <td id='mo'>{{text}}</td>
-                      <td id='mh'>{{text}}</td>
-                      <td id='ml'>{{text}}</td>
-                      <td id='mc'>{{text}}</td>
+                      <td id='meta_open'>{{text}}</td>
+                      <td id='meta_high'>{{text}}</td>
+                      <td id='meta_low'>{{text}}</td>
+                      <td id='meta_close'>{{text}}</td>
                     </tr>
                     <tr>
                       <td>Microsoft</td>
-                      <td id='mso'>{{text}}</td>
-                      <td id='msh'>{{text}}</td>
-                      <td id='msl'>{{text}}</td>
-                      <td id='msc'>{{text}}</td>
+                      <td id='microsoft_open'>{{text}}</td>
+                      <td id='microsoft_high'>{{text}}</td>
+                      <td id='microsoft_low'>{{text}}</td>
+                      <td id='microsoft_close'>{{text}}</td>
                     </tr>
                   </table>
 
@@ -80,26 +80,26 @@
         socket.onmessage=function(event){
             var data=JSON.parse(event.data);
             console.log(data);
-            document.querySelector('#app').innerText=data.message1;
-            document.querySelector('#apps').innerText=data.message2;
-            document.querySelector('#appss').innerText=data.message3;
-            document.querySelector('#appsss').innerText=data.message3;
-            document.querySelector('#app-1').innerText=data.message4;
-            document.querySelector('#app-3').innerText=data.message5;
-            document.querySelector('#app-2').innerText=data.message6;
-            document.querySelector('#app-4').innerText=data.message1;
-            document.querySelector('#ao').innerText=data.message2;
-            document.querySelector('#ah').innerText=data.message4;
-            document.querySelector('#al').innerText=data.message5;
-            document.querySelector('#ac').innerText=data.message6;
-            document.querySelector('#mso').innerText=data.message2;
-            document.querySelector('#msh').innerText=data.message4;
-            document.querySelector('#msl').innerText=data.message5;
-            document.querySelector('#msc').innerText=data.message6;
-            document.querySelector('#mo').innerText=data.message2;
-            document.querySelector('#mh').innerText=data.message4;
-            document.querySelector('#ml').innerText=data.message5;
-            document.querySelector('#mc').innerText=data.message6;
+            document.querySelector('#amazon_open').innerText=data.amazon_open_amount;
+            document.querySelector('#amazon_high').innerText=data.amazon_high_amount;
+            document.querySelector('#amazon_low').innerText=data.amazon_low_amount;
+            document.querySelector('#amazon_close').innerText=data.amazon_close_amount;
+            document.querySelector('#tesla_open').innerText=data.tesla_open_amount;
+            document.querySelector('#tesla_high').innerText=data.tesla_high_amount;
+            document.querySelector('#tesla_low').innerText=data.tesla_low_amount;
+            document.querySelector('#tesla_close').innerText=data.tesla_close_amount;
+            document.querySelector('#apple_open').innerText=data.apple_open_amount;
+            document.querySelector('#apple_high').innerText=data.apple_high_amount;
+            document.querySelector('#apple_low').innerText=data.apple_low_amount;
+            document.querySelector('#apple_close').innerText=data.apple_close_amount;
+            document.querySelector('#microsoft_open').innerText=data.microsoft_open_amount;
+            document.querySelector('#microsoft_high').innerText=data.microsoft_high_amount;
+            document.querySelector('#microsoft_low').innerText=data.microsoft_low_amount;
+            document.querySelector('#microsoft_close').innerText=data.microsoft_close_amount;
+            document.querySelector('#meta_open').innerText=data.meta_open_amount;
+            document.querySelector('#meta_high').innerText=data.meta_high_amount;
+            document.querySelector('#meta_low').innerText=data.meta_low_amount;
+            document.querySelector('#meta_close').innerText=data.meta_close_amount;
         }
     </script>
 </body>
